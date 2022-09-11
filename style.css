@@ -8,7 +8,10 @@ body {
     min-height: 100vh;
 }
 
-
+a {
+    text-decoration: none;
+    color: white;
+}
 
 h5 {
     font-family: 'Poppins', sans-serif;
@@ -391,6 +394,72 @@ h5 {
 }
 
 
+    /****************************************************** ******************************************************/
+    /****************************************************** ******************************************************/
+
+
+/******************************************************** FORM **********************************************************/
+
+
+    /****************************************************** ******************************************************/
+    /****************************************************** ******************************************************/
+
+
+
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 2em;
+
+}
+
+.input-form:not(.customize-card .input-form) {
+    border-radius: 23px;
+    height: 55px;
+    width: 100%;
+    margin-bottom: 1.5em;
+    font-size: 1.2em;
+    padding-left: 1em;
+
+}
+.label-form {
+    margin-bottom: 1em;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    font-weight: 550;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+}
+
+
+.image-experience-customize_card {
+    background-image: url(gift_card_offer_1.jpg);
+    width: 100%;
+    height: 255px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 2em auto;
+    
+}
+
+    /****************************************************** ******************************************************/
+    /****************************************************** ******************************************************/
+    /****************************************************** ******************************************************/
+    /****************************************************** ******************************************************/
+/******************************************************** MEDIA-QUERIES **********************************************************/
+
+
+
+
+
+
 @media screen and (min-width: 884px) {
     .main-wrapper {
         display: flex;
@@ -412,6 +481,11 @@ h5 {
 
     .functioning-steps h4 {
         display: none;
+    }
+
+    .functioning-steps p {
+        margin: 1.5em 1em;
+        width: 450px;
     }
 
     
@@ -462,7 +536,7 @@ h5 {
         color: #B59079;
         text-align: center;
         font-weight: bold;
-        margin-right: 234.6%;
+        margin-right: 255%;
         z-index: 1000;
       }
 
@@ -478,7 +552,7 @@ h5 {
         color: #B59079;
         text-align: center;
         font-weight: bold;
-        margin-right: 195.8%;
+        margin-right: 255%;
         z-index: 1000;
       }
 
@@ -495,7 +569,62 @@ h5 {
         align-items: center;
         width: 50%;
       }
+
+      .functioning-sub-steps {
+        margin-left: 1.2%;
+      }
+
+
+      .customize-form {
+        display: flex;        
+        margin: 2em;
+        justify-content: space-around;
+    }
+
+    .customize-form .form-wrapper {
+        width: 60%;
+    }
+
+    .customize-card_accept {
+        display: block;
+        margin: 0 auto;
+    }
     
 }
+
+.customize-card {
+    padding: 2em;
+    background-color: #B59079;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.customize-card h3 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+}
+
+
+.button-customize_card {
+    display: block;
+    width: 60%;
+    font-family: 'Poppins', sans-serif;
+    margin: 2em auto;
+    line-height: 1em;
+    padding: 15px 25px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1em;
+    text-align: center;
+    background: #000;
+    border: 1px solid #000;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+
+
 
 
