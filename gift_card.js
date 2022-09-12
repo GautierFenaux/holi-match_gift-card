@@ -1,3 +1,10 @@
+let spans = document.getElementsByTagName('span')
+let inputs = document.getElementsByClassName('input-form')
+const html = document.querySelector("html");
+
+
+
+
 var options = {
   root: null,
   rootMargin: '0px',
@@ -28,6 +35,24 @@ function handleIntersect(entries, observer) {
 Array.prototype.forEach.call(steps, step => {
   observer.observe(step);
 });
+
+
+Array.prototype.forEach.call(spans, span => {
+  span.addEventListener('click', (e) => {
+    span.classList.add('transformSpan')
+    span.previousSibling.previousSibling.focus()
+  })
+})
+
+html.addEventListener("click", (e) => {
+  Array.prototype.forEach.call(spans, span => {
+    if (e.target != span) {
+      span.classList.remove("transformSpan");
+    }
+  })
+  
+});
+
 
 
 
