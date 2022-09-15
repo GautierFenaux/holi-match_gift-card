@@ -37,44 +37,6 @@ Array.prototype.forEach.call(steps, step => {
 });
 
 
-const inputDate = document.getElementById('date')
-const webKits = ['input[type=date]::-webkit-datetime-edit', 
-'input[type=date]::-webkit-datetime-edit-fields-wrapper',
-'input[type=date]::-webkit-datetime-edit-text',
-'input[type=date]::-webkit-datetime-edit-month-field',
-'input[type=date]::-webkit-datetime-edit-day-field',
-'input[type=date]::-webkit-datetime-edit-year-field',
-'input[type=date]::-webkit-inner-spin-button',
-'input[type=date]::-webkit-calendar-picker-indicator'
-]
-
-
-
-inputDate.addEventListener('focus', (e) => {
-  console.log(inputDate.style.webkitDatetimeEdit)
-  inputDate.style.webkitDatetimeEdit = "display: inline-block";
-  inputDate.style.webkitDatetimeEditFieldsWrapper = "display: inline-block";
-
-
-
-
-
-
-  // webKits.forEach((webKit) => {
-  //   console.log(inputDate.style.webKit)
-  //   inputDate.style.webKit = 'display: inline-block'
-  // })
-})
-
-
-
-
-
-
-
-
-
-
 // Array.prototype.forEach.call(inputs, (input) => {
 //   input.addEventListener('focusin', (e) => {
 //     console.log(e.target)

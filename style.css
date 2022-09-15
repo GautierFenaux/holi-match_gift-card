@@ -417,7 +417,7 @@ h1 {
 .input-form:not(.customize-card .input-form) {
     border-radius: 23px;
     height: 55px;
-    width: 100%;
+    width: 99.2%;
     font-size: 1.2em;
     padding: 0 1em;
 
@@ -679,7 +679,7 @@ input[type=date]:focus::-webkit-datetime-edit {
     border-radius: 23px;
 }
 
-.input-form ~ .focus-border:before,
+/* .input-form ~ .focus-border:before,
 .input-form ~ .focus-border:after{
     content: ""; 
     position: absolute; 
@@ -688,35 +688,35 @@ input[type=date]:focus::-webkit-datetime-edit {
     transition: 0.4s;
     left: 0;
     right: 0;
-}
+} */
 
-.input-form:focus ~ .focus-border:before,
-.input-form:focus ~ .focus-border:after,
-.has-content.input-form ~ .focus-border:before,
-.has-content.input-form ~ .focus-border:after {
-    height: 92%; 
+/* .input-form:focus ~ .focus-border:before,
+.input-form:focus ~ .focus-border:after
+{
+    height: 93%; 
     transition: 0.6s;
     border-radius: 23px;
     border: 2px solid #B59079;
-    width: 99.5%;
+    width: 98.9%;
+} */
+
+
+.input-form:focus 
+{
+  border: 2px solid #B59079;
 }
 
 .input-form ~ label{
     position: absolute; 
     left: 15px; 
-    width: 100%; 
-    top: 15px; 
+    top: 17px; 
     color: #aaa; 
     transition: 0.3s; 
     letter-spacing: 0.5px;
+    color: #333;
+    font-size: 1.1em; 
+
 }
-/* .input-form:focus ~ label, .has-content.input-form ~ label{
-    top: -18px; 
-    left: 0; 
-    font-size: 12px; 
-    color: #3399FF; 
-    transition: 0.3s;
-} */
 
 
 input:focus{
@@ -729,27 +729,23 @@ input[type=number]:focus ~ label,
 input[type=number]:valid ~ label,
 input[type=date]:focus ~ label,
 input[type=date]:valid ~ label {
-    top: -18px; 
+    top: -24px; 
     left: 0; 
-    font-size: 12px; 
-    color: #3399FF; 
+    font-size: 1.1em; 
+    color: #333; 
     transition: 0.3s;
 }
 
-input[type=text]:valid {
-    background-color: rgb(248, 184, 89);
+
+input[type=date]::-webkit-datetime-edit
+{
+    color: transparent;
 }
 
-/* input[type="date"]::-webkit-input-placeholder{ 
-    visibility: hidden !important;
+input[type=date]:valid::-webkit-datetime-edit, input[type=date]:focus::-webkit-datetime-edit {
+    color: inherit;
+  }
+/* 
+input[type=date]:focus{
+    -webkit-datetime-edit :'df'
 } */
-input[type=date]::-webkit-datetime-edit,
-input[type=date]::-webkit-datetime-edit-fields-wrapper,
-input[type=date]::-webkit-datetime-edit-text,
-input[type=date]::-webkit-datetime-edit-month-field,
-input[type=date]::-webkit-datetime-edit-day-field,
-input[type=date]::-webkit-datetime-edit-year-field,
-input[type=date]::-webkit-inner-spin-button,
-input[type=date]::-webkit-calendar-picker-indicator{
-    display: none;
-}
