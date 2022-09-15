@@ -37,21 +37,90 @@ Array.prototype.forEach.call(steps, step => {
 });
 
 
-Array.prototype.forEach.call(spans, span => {
-  span.addEventListener('click', (e) => {
-    span.classList.add('transformSpan')
-    span.previousSibling.previousSibling.focus()
-  })
+const inputDate = document.getElementById('date')
+const webKits = ['input[type=date]::-webkit-datetime-edit', 
+'input[type=date]::-webkit-datetime-edit-fields-wrapper',
+'input[type=date]::-webkit-datetime-edit-text',
+'input[type=date]::-webkit-datetime-edit-month-field',
+'input[type=date]::-webkit-datetime-edit-day-field',
+'input[type=date]::-webkit-datetime-edit-year-field',
+'input[type=date]::-webkit-inner-spin-button',
+'input[type=date]::-webkit-calendar-picker-indicator'
+]
+
+
+
+inputDate.addEventListener('focus', (e) => {
+  console.log(inputDate.style.webkitDatetimeEdit)
+  inputDate.style.webkitDatetimeEdit = "display: inline-block";
+  inputDate.style.webkitDatetimeEditFieldsWrapper = "display: inline-block";
+
+
+
+
+
+
+  // webKits.forEach((webKit) => {
+  //   console.log(inputDate.style.webKit)
+  //   inputDate.style.webKit = 'display: inline-block'
+  // })
 })
 
-html.addEventListener("click", (e) => {
-  Array.prototype.forEach.call(spans, span => {
-    if (e.target != span) {
-      span.classList.remove("transformSpan");
-    }
-  })
+
+
+
+
+
+
+
+
+
+// Array.prototype.forEach.call(inputs, (input) => {
+//   input.addEventListener('focusin', (e) => {
+//     console.log(e.target)
+//     if(e.target.value != '') {
+//       console.log('has-content')
+//       input.classList.add('has-content')
+//     } else {
+//       input.classList.remove('has-content')
+//       console.log('no-content')
+
+//     }
+//   })
+
+// })
+
+// Array.prototype.forEach.call(spans, span => {
+//   span.addEventListener('click', () => {
+//     span.classList.add('transformSpan')
+//     span.previousSibling.previousSibling.focus()
+
+//   })
+// })
+
+// html.addEventListener("click", (e) => {
+//   Array.prototype.forEach.call(spans, span => {
+//     if (e.target != span) {
+//       span.classList.remove("transformSpan");
+//     }
+//   })
   
-});
+// });
+
+
+
+// // JavaScript for label effects only
+// $(window).load(function(){
+//   $(".col-3 input").val("");
+  
+//   $(".input-effect input").focusout(function(){
+//       if($(this).val() != ""){
+//           $(this).addClass("has-content");
+//       }else{
+//           $(this).removeClass("has-content");
+//       }
+//   })
+// });
 
 
 
